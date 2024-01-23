@@ -12,7 +12,7 @@
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#950C72"
+        android:background="#491A67"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content">
                 <xyz.schwaab.avvylib.AvatarView
 
-                    app:avvy_border_highlight_color="#ff5900"
+                    app:avvy_border_highlight_color="@color/purple_700"
                     app:avvy_border_highlight_color_end="#bf15bc"
                     app:avvy_border_thickness="2dp"
                     app:avvy_border_thickness_highlight="3dp"
@@ -72,7 +72,7 @@
                     android:gravity="center"
                     android:padding="16dp"
                     android:text="Title"
-                    android:textColor="#910D83"
+                    android:textColor="#350D91"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_scrollFlags="scroll|enterAlways" />
@@ -82,22 +82,21 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_scrollFlags="scroll|enterAlways"
+                app:cardBackgroundColor="#7E437A"
                 app:cardCornerRadius="22dp"
-                app:cardBackgroundColor="#928A0080"
-                app:strokeColor="#00950C72"
-                app:strokeWidth="0dp"
-                >
-            <TextView
-                android:id="@+id/description"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Description."
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                android:padding="16dp"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:strokeWidth="0dp">
 
-                />
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="Description."
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+
+                    />
             </androidx.cardview.widget.CardView>
 
             <com.google.android.material.tabs.TabLayout
