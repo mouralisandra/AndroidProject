@@ -11,4 +11,9 @@ class GetVnListUseCase @Inject constructor(private val vnListRepository: VnListR
     operator fun invoke(): Flow<PagingData<Vn>> {
         return vnListRepository.getVnList()
     }
+
+    fun searchVn(newText: String?) {
+        vnListRepository.searchVn(newText)
+
+    }
 }

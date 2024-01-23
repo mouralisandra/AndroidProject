@@ -53,6 +53,25 @@ class VnListRepositoryImpl @Inject constructor(
         getUserAuthInfo(token)
         emit(mapper.mapUserDbModelToUser(db.vnDao().getCurrentUser()))
     }
+    @OptIn(ExperimentalPagingApi::class)
+    override fun searchVn(newText: String?): Flow<PagingData<Vn>> {
+        remoteMediator.searchVn(newText)
+        val pagingSourceFactory = { db.vnDao().searchVn(newText) }
+        val flow = Pager(
+            config = PagingConfig(
+                pageSize = 50,
+                enablePlaceholders = true
+            ),
+            remoteMediator = remoteMediator,
+            pagingSourceFactory = pagingSourceFactory
+
+        ).flow
+        return flow.map { pagingData ->
+            pagingData.map { mapper.mapBasicDbModelInfoToEntity(it)
+            }
+        }
+
+    }
 
     private suspend fun addVnList(list: List<VnBasicInfoDbModel>) {
         db.vnDao().insertVnList(list)

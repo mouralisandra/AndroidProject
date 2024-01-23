@@ -147,6 +147,33 @@ class VnListFragment : Fragment() {
                 }
             }
         }
+
+        binding.myToolbar.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.action_logout -> {
+                    userViewModel.logout()
+                    true
+                }
+
+                else -> {
+                    findNavController().navigate(VnListFragmentDirections.actionVnListFragmentToUserPageFragment())
+                    true
+                }
+            }
+        }
+        //implement the search functionality of the androidx.appcompat.widget.SearchView android:id="@+id/search_bar"
+        binding.searchBar.setOnQueryTextListener(object :
+            androidx.appcompat.widget.SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                viewModel.searchVn(query)
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                viewModel.searchVn(newText)
+                return true
+            }
+        })
     }
 
     override fun onDestroyView() {

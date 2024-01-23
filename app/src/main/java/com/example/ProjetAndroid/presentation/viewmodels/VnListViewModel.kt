@@ -16,6 +16,12 @@ class VnListViewModel @AssistedInject constructor(
     private val getVnListUseCase: GetVnListUseCase,
     @Assisted savedStateHandle: SavedStateHandle
 ) : ViewModel() {
+    fun searchVn(newText: String?) {
+        getVnListUseCase.searchVn(newText)
+
+
+
+    }
 
     val vnList = getVnListUseCase()
         .cachedIn(viewModelScope)

@@ -120,4 +120,18 @@ class VnListRemoteMediator @Inject constructor(
             }
         }
     }
+
+    fun searchVn(newText: String?) {
+        //search for a vn with the title
+        //if the title is null, then we search for all the vn
+        val request = VnRequest(
+            page = STARTING_PAGE_INDEX,
+            results = 50,
+            reverse = true,
+            sort = "rating",
+            filters = listOf("title", "ilike", newText ?: ""),
+            fields = "title, image.url, rating, votecount"
+        )
+
+    }
 }

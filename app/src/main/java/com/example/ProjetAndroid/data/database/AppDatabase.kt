@@ -40,4 +40,6 @@ abstract class AppDatabase : RoomDatabase() {
 
     abstract fun vnDao(): VnDao
     abstract fun remoteKeysDao(): RemoteKeysDao
+
+
 }

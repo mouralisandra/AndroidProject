@@ -25,6 +25,20 @@
         app:titleCentered="true"
         app:titleTextColor="@color/white" />
 
+<!--add a search bar to search vns by title  -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:queryHint="Search Visual Novel By Title"
+        app:layout_constraintTop_toBottomOf="@id/my_toolbar"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:iconifiedByDefault="false"
+        android:paddingTop="5dp"
+        android:paddingBottom="3dp"
+        app:queryHint="Search" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
@@ -32,9 +46,10 @@
         android:id="@+id/vnList"
         android:layout_height="0dp"
         android:padding="2dp"
+        android:layout_marginTop="4dp"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toTopOf="@id/progress_bar"
-        app:layout_constraintTop_toBottomOf="@id/my_toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/search_bar"
         tools:layout_editor_absoluteX="0dp"
         app:spanCount="2"
 

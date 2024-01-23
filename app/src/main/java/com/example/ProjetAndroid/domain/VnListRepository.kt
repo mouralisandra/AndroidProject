@@ -10,4 +10,7 @@ interface VnListRepository {
     fun getVnDetails(id: String): Flow<Vn>
 
     fun getUser(token: String): Flow<User?>
+
+    fun searchVn(newText: String?) : Flow<PagingData<Vn>>
+
 }

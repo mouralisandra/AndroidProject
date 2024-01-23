@@ -14,9 +14,6 @@ import com.example.ProjetAndroid.data.database.dbmodels.VnFullInfoDbModel
 @Dao
 interface VnDao {
 
-    @Query("SELECT * FROM vn_basic_info ORDER BY rating DESC, votecount DESC")
-    fun getVnList(): PagingSource<Int, VnBasicInfoDbModel>
-
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertVnList(vnList: List<VnBasicInfoDbModel>)
 
@@ -38,4 +35,11 @@ interface VnDao {
 
     @Query("DELETE FROM user")
     suspend fun removeCurrentUser()
+
+    @Query("SELECT * FROM vn_basic_info")
+    fun getVnList(): PagingSource<Int, VnBasicInfoDbModel>
+
+    @Query("SELECT * FROM vn_basic_info WHERE title LIKE '%' || :newText || '%'")
+    fun searchVn(newText: String?): PagingSource<Int, VnBasicInfoDbModel>
+
 }
