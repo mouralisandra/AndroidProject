@@ -17,6 +17,9 @@ import com.example.ProjetAndroid.presentation.viewmodels.LoginState
 import com.example.ProjetAndroid.presentation.viewmodels.UserViewModel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import com.bumptech.glide.Glide
+import com.example.ProjetAndroid.R
+
 
 class LoginFragment : Fragment() {
 
@@ -54,15 +57,21 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         savedStateHandle = findNavController().previousBackStackEntry!!.savedStateHandle
         savedStateHandle[LOGIN_SUCCESSFUL] = false
+
+        Glide.with(this)
+            .asGif()
+            .load(R.drawable.anime) // Replace with your GIF resource
+            .into(binding.gifImage)
+
         binding.sendToken.setOnClickListener {
             val token = binding.textInputEditText.text.toString()
             userViewModel.login(token)
         }
+
         lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.RESUMED) {
-                userViewModel.loginState.collectLatest {
-                    binding.state.text = it.state.toString()
-                    if (it.state == LoginState.Logged) {
+                userViewModel.loginState.collectLatest { loginState ->
+                    if (loginState.state == LoginState.Logged) {
                         savedStateHandle[LOGIN_SUCCESSFUL] = true
                         findNavController().popBackStack()
                     }
