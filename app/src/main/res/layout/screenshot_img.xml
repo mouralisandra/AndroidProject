@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/image_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/screenshot_img"
+        android:layout_width="192dp"
+        android:layout_height="136dp" />
+    <!-- This initially hidden ImageView holds the zoomed version of
+         the preceding images. Without transformations applied, it fills the entire
+         screen. To achieve the zoom animation, this view's bounds are animated
+         from the bounds of the preceding thumbnail button to its final laid-out
+         bounds.
+         -->
+
+    <ImageView
+        android:id="@+id/expanded_image"
+        android:layout_width="194dp"
+        android:layout_height="136dp"
+        android:visibility="visible" />
+
+</FrameLayout>
