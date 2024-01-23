@@ -3,14 +3,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.fragments.UserPageFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/user_name"
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#950C72"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/top_app_bar"
+        app:navigationIcon="@drawable/baseline_account_circle_24"
+        app:title="User Profile"
+        app:titleCentered="true"
+        app:titleTextColor="@color/white" />
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#950C72"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <xyz.schwaab.avvylib.AvatarView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:avvy_border_highlight_color="#231ECC"
+            app:avvy_border_highlight_color_end="#bf15bc"
+            app:avvy_border_thickness="2dp"
+            app:avvy_border_thickness_highlight="3dp"
+            app:avvy_distance_to_border="5dp"
+            app:avvy_highlighted="true"
+            app:avvy_loading_arches="5"
+            app:avvy_loading_arches_degree_area="90"
+            tools:src="@drawable/img">
+
+        </xyz.schwaab.avvylib.AvatarView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You are logged in as :"
+            android:textSize="24sp"
+            android:textColor="@color/purple_500"
+            android:fontFamily="sans-serif-medium"/>
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_500"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:padding="16dp"/>
+
+    </LinearLayout>
 
 </FrameLayout>

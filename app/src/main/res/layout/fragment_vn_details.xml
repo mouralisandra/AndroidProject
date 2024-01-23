@@ -79,15 +79,26 @@
 
             </com.google.android.material.appbar.AppBarLayout>
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:cardCornerRadius="22dp"
+                app:cardBackgroundColor="#928A0080"
+                app:strokeColor="#00950C72"
+                app:strokeWidth="0dp"
+                >
             <TextView
                 android:id="@+id/description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#928A0080"
-                android:padding="16dp"
                 android:text="Description."
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:padding="16dp"
+
+                />
+            </androidx.cardview.widget.CardView>
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tabs"

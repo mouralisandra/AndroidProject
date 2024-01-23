@@ -20,7 +20,6 @@ import kotlinx.coroutines.launch
 import com.bumptech.glide.Glide
 import com.example.ProjetAndroid.R
 
-
 class LoginFragment : Fragment() {
 
     companion object {
@@ -55,25 +54,26 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        savedStateHandle = findNavController().previousBackStackEntry!!.savedStateHandle
-        savedStateHandle[LOGIN_SUCCESSFUL] = false
-
         Glide.with(this)
             .asGif()
             .load(R.drawable.anime) // Replace with your GIF resource
             .into(binding.gifImage)
-
+        savedStateHandle = findNavController().previousBackStackEntry!!.savedStateHandle
+        savedStateHandle[LOGIN_SUCCESSFUL] = false
         binding.sendToken.setOnClickListener {
             val token = binding.textInputEditText.text.toString()
             userViewModel.login(token)
         }
-
         lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.RESUMED) {
-                userViewModel.loginState.collectLatest { loginState ->
-                    if (loginState.state == LoginState.Logged) {
+                userViewModel.loginState.collectLatest {
+                    binding.state.text = it.state.toString()
+                    if (it.state == LoginState.Logged) {
                         savedStateHandle[LOGIN_SUCCESSFUL] = true
                         findNavController().popBackStack()
+                    }
+                    else if (it.state == LoginState.Error) {
+                        binding.state.text = "Authentification error, Please enter the correct Token"
                     }
                 }
             }
