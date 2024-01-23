@@ -56,7 +56,7 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         Glide.with(this)
             .asGif()
-            .load(R.drawable.anime) // Replace with your GIF resource
+            .load(R.drawable.gif_empty) // Replace with your GIF resource
             .into(binding.gifImage)
         savedStateHandle = findNavController().previousBackStackEntry!!.savedStateHandle
         savedStateHandle[LOGIN_SUCCESSFUL] = false

@@ -46,7 +46,7 @@ class ScreenshotImgAdapter :
             crossfade(true)
             crossfade(250)
             placeholder(R.drawable.loading_animation)
-            error(R.drawable.ic_broken_image)
+            error(R.drawable.gif_error)
             Log.d("img", img.first)
         }
         holder.binding.screenshotImg.setOnClickListener {

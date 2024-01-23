@@ -79,7 +79,7 @@ class VnDetailsFragment : Fragment() {
                         crossfade(true)
                         crossfade(200)
                         placeholder(R.drawable.loading_animation)
-                        error(R.drawable.ic_broken_image)
+                        error(R.drawable.gif_error)
                     }
 
                     binding.title.text = state.vn.title

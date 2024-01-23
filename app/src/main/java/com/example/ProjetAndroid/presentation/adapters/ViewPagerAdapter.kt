@@ -28,7 +28,7 @@ class ViewPagerAdapter(private val urlList: Array<String>) :
             crossfade(true)
             crossfade(250)
             placeholder(R.drawable.loading_animation)
-            error(R.drawable.ic_broken_image)
+            error(R.drawable.gif_error)
         }
     }
 
