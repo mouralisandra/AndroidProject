@@ -174,6 +174,22 @@ class VnListFragment : Fragment() {
                 return true
             }
         })
+
+        binding.myToolbar.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.action_logout -> {
+                    userViewModel.logout()
+                    true
+                }
+
+                else -> {
+                    findNavController().navigate(VnListFragmentDirections.actionVnListFragmentToUserPageFragment())
+                    true
+                }
+            }
+        }
+
+
     }
 
     override fun onDestroyView() {
