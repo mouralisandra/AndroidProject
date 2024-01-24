@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/top_app_bar"
-        app:navigationIcon="@drawable/baseline_account_circle_24"
+        app:navigationIcon="@drawable/logo"
         app:title="Game Details"
         app:titleCentered="true"
         app:titleTextColor="@color/white"
