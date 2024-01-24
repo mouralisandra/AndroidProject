@@ -1,6 +1,4 @@
-package com.example.ProjetAndroid.Model.api.dataclass.visualnovel
-
-import com.example.ProjetAndroid.Model.api.dataclass.Image
+package com.example.ProjetAndroid.Model.api.DataClasses
 
 data class VnResults(
     val id: String,

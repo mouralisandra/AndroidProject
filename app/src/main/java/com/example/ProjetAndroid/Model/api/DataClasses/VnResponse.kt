@@ -1,4 +1,4 @@
-package com.example.ProjetAndroid.Model.api.dataclass.visualnovel
+package com.example.ProjetAndroid.Model.api.DataClasses
 
 import com.google.gson.annotations.SerializedName
 

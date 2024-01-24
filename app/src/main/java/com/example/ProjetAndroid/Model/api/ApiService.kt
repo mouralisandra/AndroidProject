@@ -1,8 +1,8 @@
 package com.example.ProjetAndroid.Model.api
 
-import com.example.ProjetAndroid.Model.api.dataclass.Authinfo
-import com.example.ProjetAndroid.Model.api.dataclass.visualnovel.VnRequest
-import com.example.ProjetAndroid.Model.api.dataclass.visualnovel.VnResponse
+import com.example.ProjetAndroid.Model.api.DataClasses.Authinfo
+import com.example.ProjetAndroid.Model.api.DataClasses.VnRequest
+import com.example.ProjetAndroid.Model.api.DataClasses.VnResponse
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

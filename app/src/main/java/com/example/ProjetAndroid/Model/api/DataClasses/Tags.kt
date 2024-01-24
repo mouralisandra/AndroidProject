@@ -1,4 +1,4 @@
-package com.example.ProjetAndroid.Model.api.dataclass.visualnovel
+package com.example.ProjetAndroid.Model.api.DataClasses
 
 data class Tags(
     val rating: Double,

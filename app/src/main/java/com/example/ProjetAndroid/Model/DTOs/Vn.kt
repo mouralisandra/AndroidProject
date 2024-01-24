@@ -1,6 +1,6 @@
 package com.example.ProjetAndroid.Model.DTOs
 
-import com.example.ProjetAndroid.Model.api.dataclass.visualnovel.Tags
+import com.example.ProjetAndroid.Model.api.DataClasses.Tags
 
 data class Vn(
     val id: String = "",

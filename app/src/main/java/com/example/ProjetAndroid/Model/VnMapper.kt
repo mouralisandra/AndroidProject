@@ -4,8 +4,8 @@ import com.example.ProjetAndroid.Model.database.dbmodels.UserDbModel
 import com.example.ProjetAndroid.Model.database.dbmodels.VnAdditionalInfoDbModel
 import com.example.ProjetAndroid.Model.database.dbmodels.VnBasicInfoDbModel
 import com.example.ProjetAndroid.Model.database.dbmodels.VnFullInfoDbModel
-import com.example.ProjetAndroid.Model.api.dataclass.Authinfo
-import com.example.ProjetAndroid.Model.api.dataclass.visualnovel.VnResults
+import com.example.ProjetAndroid.Model.api.DataClasses.Authinfo
+import com.example.ProjetAndroid.Model.api.DataClasses.VnResults
 import com.example.ProjetAndroid.Model.DTOs.ScreenshotList
 import com.example.ProjetAndroid.Model.DTOs.User
 import com.example.ProjetAndroid.Model.DTOs.Vn

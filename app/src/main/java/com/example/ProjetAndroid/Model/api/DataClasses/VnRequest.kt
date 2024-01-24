@@ -1,4 +1,4 @@
-package com.example.ProjetAndroid.Model.api.dataclass.visualnovel
+package com.example.ProjetAndroid.Model.api.DataClasses
 
 data class VnRequest(
     val page: Int? = null,

@@ -9,7 +9,7 @@ import com.example.ProjetAndroid.Model.database.AppDatabase
 import com.example.ProjetAndroid.Model.database.dbmodels.RemoteKeys
 import com.example.ProjetAndroid.Model.database.dbmodels.VnBasicInfoDbModel
 import com.example.ProjetAndroid.Model.api.ApiService
-import com.example.ProjetAndroid.Model.api.dataclass.visualnovel.VnRequest
+import com.example.ProjetAndroid.Model.api.DataClasses.VnRequest
 import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject

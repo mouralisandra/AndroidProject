@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.ProjetAndroid.Model.api.dataclass.visualnovel.Tags
+import com.example.ProjetAndroid.Model.api.DataClasses.Tags
 import com.example.ProjetAndroid.Model.DTOs.Vn
 import com.example.ProjetAndroid.Model.DTOs.queries.GetVnDetails
 import dagger.assisted.Assisted

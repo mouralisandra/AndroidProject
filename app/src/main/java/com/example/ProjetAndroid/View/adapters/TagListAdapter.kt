@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ProjetAndroid.Model.api.dataclass.visualnovel.Tags
+import com.example.ProjetAndroid.Model.api.DataClasses.Tags
 import com.example.ProjetAndroid.databinding.ItemTagBinding
 
 class TagListAdapter : ListAdapter<Tags, TagListAdapter.TagViewHolder>(DiffCallback) {

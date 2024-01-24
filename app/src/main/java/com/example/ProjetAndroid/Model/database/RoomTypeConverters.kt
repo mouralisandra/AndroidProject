@@ -1,7 +1,7 @@
 package com.example.ProjetAndroid.Model.database
 
 import androidx.room.TypeConverter
-import com.example.ProjetAndroid.Model.api.dataclass.visualnovel.Tags
+import com.example.ProjetAndroid.Model.api.DataClasses.Tags
 import com.example.ProjetAndroid.Model.DTOs.ScreenshotList
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken

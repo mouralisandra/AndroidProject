@@ -2,7 +2,7 @@ package com.example.ProjetAndroid.Model.database.dbmodels
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.ProjetAndroid.Model.api.dataclass.visualnovel.Tags
+import com.example.ProjetAndroid.Model.api.DataClasses.Tags
 import com.example.ProjetAndroid.Model.DTOs.ScreenshotList
 
 @Entity(tableName = "vn_additional_info")

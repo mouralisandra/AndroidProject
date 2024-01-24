@@ -11,8 +11,8 @@ import com.example.ProjetAndroid.Model.database.dbmodels.UserDbModel
 import com.example.ProjetAndroid.Model.database.dbmodels.VnAdditionalInfoDbModel
 import com.example.ProjetAndroid.Model.database.dbmodels.VnBasicInfoDbModel
 import com.example.ProjetAndroid.Model.api.ApiService
-import com.example.ProjetAndroid.Model.api.dataclass.visualnovel.VnRequest
-import com.example.ProjetAndroid.Model.api.dataclass.visualnovel.VnResults
+import com.example.ProjetAndroid.Model.api.DataClasses.VnRequest
+import com.example.ProjetAndroid.Model.api.DataClasses.VnResults
 import com.example.ProjetAndroid.Model.DTOs.User
 import com.example.ProjetAndroid.Model.DTOs.Vn
 import com.example.ProjetAndroid.Model.DTOs.VnListRepository
