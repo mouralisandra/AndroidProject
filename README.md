@@ -19,9 +19,7 @@ Secure and reliable user authentication system.
   ![Tags Retrieval](https://github.com/mouralisandra/ProjetAndroid/assets/98917826/5f344f7d-2291-481c-bcde-2c25e3e7917f)
 - **Screenshots**: Get a visual feel of the games.
   ![Screenshots](https://github.com/mouralisandra/ProjetAndroid/assets/98917826/708a03ea-23a4-4be7-a588-a985bcf7e3b8)
-- **Individual Screenshot View**
-  ![Individual Screenshot View](Uploading image.png…)
-
+  
 ### User Page
 A personalized page for user settings and preferences.
 ![User Page](https://github.com/mouralisandra/ProjetAndroid/assets/98917826/844efc31-9b82-451c-98a8-7a426d1d3c14)
