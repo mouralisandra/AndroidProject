@@ -1,5 +1,7 @@
-![image](https://github.com/mouralisandra/ProjetAndroid/assets/98917826/3036eb76-1450-4ff4-9917-65ea3e946b9a)## Games list :
+## Games list :
+![image](https://github.com/mouralisandra/ProjetAndroid/assets/98917826/3036eb76-1450-4ff4-9917-65ea3e946b9a)
 ![image](https://github.com/mouralisandra/ProjetAndroid/assets/98917826/30aeed54-26b6-44f0-9c6b-3798e6a81915)
+
 ## Token Authentification : 
 ![image](https://github.com/mouralisandra/ProjetAndroid/assets/98917826/685eebfa-a388-4f57-9a71-3d0a32b42834)
 ## Details from API: 
