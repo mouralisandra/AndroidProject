@@ -29,7 +29,6 @@ class VnListViewModel @AssistedInject constructor(
 
     fun searchVn(newText: String?) {
         getVnList.searchVn(newText)
-        //cancel previous search
 
     }
 }
