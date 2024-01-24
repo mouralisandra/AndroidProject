@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context=".presentation.fragments.VnListFragment">
+    tools:context=".View.fragments.VnListFragment">
 
     <!-- Material Toolbar -->
     <com.google.android.material.appbar.MaterialToolbar

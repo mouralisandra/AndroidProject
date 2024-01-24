@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/vnListFragment"
-        android:name="com.example.ProjetAndroid.presentation.fragments.VnListFragment"
+        android:name="com.example.ProjetAndroid.View.fragments.VnListFragment"
         android:label="fragment_vn_list"
         tools:layout="@layout/fragment_vn_list">
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/vnDetailsFragment"
-        android:name="com.example.ProjetAndroid.presentation.fragments.VnDetailsFragment"
+        android:name="com.example.ProjetAndroid.View.fragments.VnDetailsFragment"
         android:label="fragment_vn_details"
         tools:layout="@layout/fragment_vn_details">
         <argument
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/screenshotPagerFragment"
-        android:name="com.example.ProjetAndroid.presentation.fragments.ScreenshotPagerFragment"
+        android:name="com.example.ProjetAndroid.View.fragments.ScreenshotPagerFragment"
         android:label="fragment_screenshot_pager"
         tools:layout="@layout/fragment_screenshot_pager">
         <argument
@@ -43,11 +43,11 @@
     </fragment>
     <fragment
         android:id="@+id/userPageFragment"
-        android:name="com.example.ProjetAndroid.presentation.fragments.UserPageFragment"
+        android:name="com.example.ProjetAndroid.View.fragments.UserPageFragment"
         tools:layout="@layout/fragment_user_page" />
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.ProjetAndroid.presentation.fragments.LoginFragment"
+        android:name="com.example.ProjetAndroid.View.fragments.LoginFragment"
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_vnListFragment"

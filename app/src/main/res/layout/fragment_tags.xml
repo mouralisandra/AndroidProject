@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/tags_fragment"
-    tools:context=".presentation.fragments.TagsFragment">
+    tools:context=".View.fragments.TagsFragment">
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/contentTypeGroup"

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".presentation.fragments.ScreenshotPagerFragment">
+    tools:context=".View.fragments.ScreenshotPagerFragment">
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/screenshot_pager"

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context=".presentation.fragments.VnDetailsFragment">
+    tools:context=".View.fragments.VnDetailsFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/my_toolbar"
@@ -22,7 +22,7 @@
         app:title="Game Details"
         app:titleCentered="true"
         app:titleTextColor="@color/white"
-        tools:context=".presentation.fragments.VnDetailsFragment" />
+        tools:context=".View.fragments.VnDetailsFragment" />
 
 
     <androidx.core.widget.NestedScrollView
