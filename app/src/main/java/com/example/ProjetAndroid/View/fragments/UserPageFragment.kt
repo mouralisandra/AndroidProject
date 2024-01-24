@@ -14,7 +14,7 @@ import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.ProjetAndroid.R
 import com.example.ProjetAndroid.databinding.FragmentUserPageBinding
-import com.example.ProjetAndroid.View.VndbApplication
+import com.example.ProjetAndroid.View.VNsApplication
 import com.example.ProjetAndroid.ViewModel.viewmodels.LoginState
 import com.example.ProjetAndroid.ViewModel.viewmodels.UserViewModel
 import kotlinx.coroutines.flow.collectLatest
@@ -27,7 +27,7 @@ class UserPageFragment : Fragment() {
         get() = _binding ?: throw RuntimeException("UserPageFragment == null")
 
     private val component by lazy {
-        (requireActivity().application as VndbApplication).component
+        (requireActivity().application as VNsApplication).component
     }
 
     private val userViewModelFactory by lazy {

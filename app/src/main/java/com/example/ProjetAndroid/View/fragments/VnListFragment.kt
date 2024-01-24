@@ -16,7 +16,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
 import com.example.ProjetAndroid.R
 import com.example.ProjetAndroid.databinding.FragmentVnListBinding
-import com.example.ProjetAndroid.View.VndbApplication
+import com.example.ProjetAndroid.View.VNsApplication
 import com.example.ProjetAndroid.View.adapters.VnListAdapter
 import com.example.ProjetAndroid.View.adapters.VnLoadStateAdapter
 import com.example.ProjetAndroid.ViewModel.viewmodels.LoginState
@@ -32,7 +32,7 @@ class VnListFragment : Fragment() {
         get() = _binding ?: throw RuntimeException("VnListFragment == null")
 
     private val component by lazy {
-        (requireActivity().application as VndbApplication).component
+        (requireActivity().application as VNsApplication).component
     }
 
     private val viewModel by lazyViewModel { stateHandle ->
@@ -117,8 +117,6 @@ class VnListFragment : Fragment() {
         lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.RESUMED) {
                 vnListAdapter.loadStateFlow.collect { loadState ->
-                    // Show a retry header if there was an error refreshing, and items were previously
-                    // cached OR default to the default prepend state
                     header.loadState = loadState.mediator
                         ?.refresh
                         ?.takeIf { it is LoadState.Error && vnListAdapter.itemCount > 0 }
@@ -126,7 +124,6 @@ class VnListFragment : Fragment() {
 
                     val isListEmpty =
                         loadState.refresh is LoadState.NotLoading && vnListAdapter.itemCount == 0
-                    // show empty list
                     binding.emptyList.isVisible = isListEmpty
                     // Only show the list if refresh succeeds, either from the the local db or the remote.
                     binding.vnList.isVisible =
@@ -148,19 +145,6 @@ class VnListFragment : Fragment() {
             }
         }
 
-        binding.myToolbar.setOnMenuItemClickListener { menuItem ->
-            when (menuItem.itemId) {
-                R.id.action_logout -> {
-                    userViewModel.logout()
-                    true
-                }
-
-                else -> {
-                    findNavController().navigate(VnListFragmentDirections.actionVnListFragmentToUserPageFragment())
-                    true
-                }
-            }
-        }
         //implement the search functionality of the androidx.appcompat.widget.SearchView android:id="@+id/search_bar"
         binding.searchBar.setOnQueryTextListener(object :
             androidx.appcompat.widget.SearchView.OnQueryTextListener {
@@ -174,20 +158,6 @@ class VnListFragment : Fragment() {
                 return true
             }
         })
-
-        binding.myToolbar.setOnMenuItemClickListener { menuItem ->
-            when (menuItem.itemId) {
-                R.id.action_logout -> {
-                    userViewModel.logout()
-                    true
-                }
-
-                else -> {
-                    findNavController().navigate(VnListFragmentDirections.actionVnListFragmentToUserPageFragment())
-                    true
-                }
-            }
-        }
 
 
     }

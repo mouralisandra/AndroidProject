@@ -12,7 +12,7 @@ import androidx.navigation.fragment.navArgs
 import coil.load
 import com.example.ProjetAndroid.R
 import com.example.ProjetAndroid.databinding.FragmentVnDetailsBinding
-import com.example.ProjetAndroid.View.VndbApplication
+import com.example.ProjetAndroid.View.VNsApplication
 import com.example.ProjetAndroid.View.adapters.ScreenshotGroupAdapter
 import com.example.ProjetAndroid.ViewModel.viewmodels.lazyViewModel
 import com.google.android.material.tabs.TabLayout
@@ -28,7 +28,7 @@ class VnDetailsFragment : Fragment() {
         get() = _binding ?: throw RuntimeException("VnDetails == null")
 
     private val component by lazy {
-        (requireActivity().application as VndbApplication).component
+        (requireActivity().application as VNsApplication).component
     }
 
     private val viewModel by lazyViewModel { stateHandle ->
