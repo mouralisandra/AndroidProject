@@ -1,7 +1,7 @@
 # VNsAPI - Visual Novel Games Explorer
 
 ## 🌟 Project Description
-VNsAPI is a groundbreaking Android application, developed in Kotlin and utilizing the VNDB Android API. This app provides a secure and user-friendly platform for visual novel enthusiasts, offering detailed insights into various visual novel games. Users can delve into game descriptions, view posters and screenshots, and explore tags. VNsAPI is designed to handle connectivity and authentication issues efficiently, ensuring a seamless experience.
+VNsAPI is a groundbreaking Android application, developed in Kotlin and utilizing the Visual Novel Database Android API. This app provides a secure and user-friendly platform for visual novel enthusiasts, offering detailed insights into various visual novel games. Users can delve into game descriptions, view posters and screenshots, and explore tags. VNsAPI is designed to handle connectivity and authentication issues efficiently, ensuring a seamless experience.
 
 ## 📱 App Pages & Screenshots
 ### Games List
