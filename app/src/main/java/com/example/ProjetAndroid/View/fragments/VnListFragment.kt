@@ -17,7 +17,7 @@ import androidx.paging.LoadState
 import com.example.ProjetAndroid.NetworkUtils
 import com.example.ProjetAndroid.R
 import com.example.ProjetAndroid.databinding.FragmentVnListBinding
-import com.example.ProjetAndroid.View.VndbApplication
+import com.example.ProjetAndroid.View.AndroidPeojectApplication
 import com.example.ProjetAndroid.View.adapters.VnListAdapter
 import com.example.ProjetAndroid.View.adapters.VnLoadStateAdapter
 import com.example.ProjetAndroid.ViewModel.viewmodels.LoginState
@@ -33,7 +33,7 @@ class VnListFragment : Fragment() {
         get() = _binding ?: throw RuntimeException("VnListFragment == null")
 
     private val component by lazy {
-        (requireActivity().application as VndbApplication).component
+        (requireActivity().application as AndroidPeojectApplication).component
     }
 
     private val viewModel by lazyViewModel { stateHandle ->

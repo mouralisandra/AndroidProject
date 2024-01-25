@@ -14,7 +14,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.example.ProjetAndroid.R
 import com.example.ProjetAndroid.databinding.FragmentLoginBinding
-import com.example.ProjetAndroid.View.VndbApplication
+import com.example.ProjetAndroid.View.AndroidPeojectApplication
 import com.example.ProjetAndroid.ViewModel.viewmodels.LoginState
 import com.example.ProjetAndroid.ViewModel.viewmodels.UserViewModel
 import kotlinx.coroutines.flow.collectLatest
@@ -34,7 +34,7 @@ class LoginFragment : Fragment() {
         get() = _binding ?: throw RuntimeException("LoginFragment binding is null")
 
     private val component by lazy {
-        (requireActivity().application as VndbApplication).component
+        (requireActivity().application as AndroidPeojectApplication).component
     }
 
     private val userViewModelFactory by lazy {
