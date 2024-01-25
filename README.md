@@ -21,9 +21,9 @@ Secure and reliable user authentication system.
   ![Screenshots](https://github.com/mouralisandra/ProjetAndroid/assets/98917826/708a03ea-23a4-4be7-a588-a985bcf7e3b8)
   
 ### User Page
-A personalized page for user settings and preferences.
-  ![image](https://github.com/mouralisandra/AndroidProject/assets/98917826/0d4fc323-2d05-4dda-8726-941d5e0574bc)
-
+- A personalized page for user settings and preferences.
+  ![image](https://github.com/mouralisandra/AndroidProject/assets/98917826/2ccacb03-4b06-4bd4-943a-97a7b82ee215)
+  
 ## Error Handling
 - **No Internet Connection**: Ensuring uninterrupted browsing even in offline mode.
   ![No Internet](https://github.com/mouralisandra/ProjetAndroid/assets/98917826/7804a0f4-b0ad-4864-8bdd-3629b9dfbc7c)
