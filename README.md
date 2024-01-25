@@ -27,7 +27,7 @@ Secure and reliable user authentication system.
 ## Error Handling
 - **No Internet Connection**: Ensuring uninterrupted browsing even in offline mode.
   ![No Internet](https://github.com/mouralisandra/ProjetAndroid/assets/98917826/7804a0f4-b0ad-4864-8bdd-3629b9dfbc7c)
-  ![image](https://github.com/mouralisandra/AndroidProject/assets/98917826/e3b5e545-2e66-4e94-a63f-db80bde758c4)
+  ![image](https://github.com/mouralisandra/AndroidProject/assets/98917826/2444285b-8fbe-469a-8a9e-beb33eae592b)
 
 - **Unable to Reach Visual Novel DB API Endpoint**: Efficient handling of API connectivity issues.
   ![API Endpoint Error](https://github.com/mouralisandra/ProjetAndroid/assets/98917826/949283fc-9a80-4a25-8ff5-4557e61d2f4e)
