@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.VNDBViewer" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Theme.AndroidProjectViewer" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -14,7 +14,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.VNDBViewer.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.AndroidProjectViewer.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="Theme.VNDBViewer.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.AndroidProjectViewer.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
