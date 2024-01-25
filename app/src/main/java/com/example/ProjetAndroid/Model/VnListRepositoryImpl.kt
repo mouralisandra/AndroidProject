@@ -55,7 +55,6 @@ class VnListRepositoryImpl @Inject constructor(
     }
     @OptIn(ExperimentalPagingApi::class)
     override fun searchVn(newText: String?): Flow<PagingData<Vn>> {
-        remoteMediator.searchVn(newText)
         val pagingSourceFactory = { db.vnDao().searchVn(newText) }
         val flow = Pager(
             config = PagingConfig(
@@ -64,12 +63,12 @@ class VnListRepositoryImpl @Inject constructor(
             ),
             remoteMediator = remoteMediator,
             pagingSourceFactory = pagingSourceFactory
-
         ).flow
         return flow.map { pagingData ->
-            pagingData.map { mapper.mapBasicDbModelInfoToEntity(it)
-            }
+            pagingData.map { mapper.mapBasicDbModelInfoToEntity(it) }
+
         }
+
 
     }
 
