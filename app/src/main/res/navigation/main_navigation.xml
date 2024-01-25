@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/vnListFragment"
+        android:name="com.example.ProjetAndroid.View.fragments.VnListFragment"
+        android:label="fragment_vn_list"
+        tools:layout="@layout/fragment_vn_list">
+        <action
+            android:id="@+id/action_vnListFragment_to_vnDetailsFragment"
+            app:destination="@id/vnDetailsFragment" />
+        <action
+            android:id="@+id/action_vnListFragment_to_userPageFragment"
+            app:destination="@id/userPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vnDetailsFragment"
+        android:name="com.example.ProjetAndroid.View.fragments.VnDetailsFragment"
+        android:label="fragment_vn_details"
+        tools:layout="@layout/fragment_vn_details">
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_vnDetailsFragment_to_screenshotPagerFragment"
+            app:destination="@+id/screenshotPagerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/screenshotPagerFragment"
+        android:name="com.example.ProjetAndroid.View.fragments.ScreenshotPagerFragment"
+        android:label="fragment_screenshot_pager"
+        tools:layout="@layout/fragment_screenshot_pager">
+        <argument
+            android:name="urls"
+            app:argType="string[]" />
+        <argument
+            android:name="selectedImagePosition"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/userPageFragment"
+        android:name="com.example.ProjetAndroid.View.fragments.UserPageFragment"
+        tools:layout="@layout/fragment_user_page" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.ProjetAndroid.View.fragments.LoginFragment"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_vnListFragment"
+            app:destination="@id/vnListFragment" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_loginFragment"
+        app:destination="@id/loginFragment" />
+</navigation>
